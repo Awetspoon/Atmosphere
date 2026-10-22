@@ -11,7 +11,7 @@ The aim is to preserve Atmosphère's original architecture, reuse its documented
 - [x] Dedicated `development/usb-storage-feasibility` branch, official upstream remote.
 - [x] Main source, headers, makefiles, fusee, mesosphere, emuMMC and stratosphere preserved.
 - [x] Personal hosted GitHub fork `Awetspoon/Atmosphere` created by owner; verified and connected locally as `origin`.
-- [ ] Local `development/usb-storage-feasibility` branch published to the hosted fork (separate explicit approval required).
+- [x] Documentation-only `development/usb-storage-feasibility` branch published to the hosted fork after explicit approval on 2026-10-22.
 - [ ] Unmodified baseline complete compile / regression suite (**not** claimed).
 
 ## Phase F1 — Evidence and dependency mapping (current documentation-only stage)

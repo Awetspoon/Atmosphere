@@ -9,7 +9,7 @@ This directory is an **independent local Git clone of the real Atmosphère sourc
 - **Base:** upstream Atmosphère 1.12.1 at commit `6b0c077b4c608a3a2ee712b8dc35fee87ceb62e8` (2026-10-16).
 - **Working branch:** `development/usb-storage-feasibility`.
 - **Fetch remote:** `upstream = https://github.com/Atmosphere-NX/Atmosphere.git`.
-- **Personal GitHub fork:** created at https://github.com/Awetspoon/Atmosphere and connected as `origin`. Official Atmosphère remains `upstream`; the local development branch has **not yet been pushed**. See `docs/usb-gamecard/GITHUB_FORK_SETUP.md`.
+- **Personal GitHub fork:** created at https://github.com/Awetspoon/Atmosphere and connected as `origin`. Official Atmosphère remains `upstream`; the development branch is **published to your GitHub fork**, with original source unchanged. See `docs/usb-gamecard/GITHUB_FORK_SETUP.md`.
 - **Licence:** preserve Atmosphère's GPLv2 and any separate component notices. Do not publish copies of Nintendo proprietary firmware, game content or keys.
 
 ## Project separation
@@ -63,7 +63,7 @@ Atmosphère additionally has `fsp-srv` gamecard-related *accessors* and an `ams_
 - `docs/usb-gamecard/SOURCE_MAP.md`: grounded file/path/line interface map.
 - `docs/usb-gamecard/INTERFACE_BOUNDARIES.md`: evidence-backed architecture sketch.
 - `docs/usb-gamecard/IMPLEMENTATION_GATES.md`: decision and test gates, no unsupported promises.
-- `docs/usb-gamecard/GITHUB_FORK_SETUP.md`: verified hosted fork, connected remotes and separately authorised publishing.
+- `docs/usb-gamecard/GITHUB_FORK_SETUP.md`: verified hosted fork, published development branch and future Git sync instructions.
 - `docs/usb-gamecard/DECISION_LOG.md`: baseline choices, approvals and limitations.
 
 **No production firmware/gamecard functionality has yet been changed.** That is deliberate: retaining the source's integrity is part of the first phase of a safe fork.

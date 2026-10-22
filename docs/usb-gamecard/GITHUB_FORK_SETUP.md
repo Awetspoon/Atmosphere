@@ -8,7 +8,7 @@
 - **Local development branch:** `development/usb-storage-feasibility`
 - **Local branch currently contains:** project rules and source/interface maps; no original Atmosphère program source changes.
 - **Hosted fork's `master`:** verified to match the pinned Atmosphère 1.12.1 base commit `6b0c077b4c608a3a2ee712b8dc35fee87ceb62e8`.
-- **Development branch on GitHub:** not yet pushed or published as of this document update.
+- **Development branch on GitHub:** published using the connected GitHub integration on 2026-10-22. GitHub publication commit `7b303603f02a543896896454eb82905723a77704` exactly matches the original local development tree `8f5c5fe1da76ddc77630b7a34d847c5e0605372d` (8 documentation/test-check files).
 
 ## Remotes are correctly separated
 
@@ -29,19 +29,23 @@ $repo = Join-Path $env:USERPROFILE 'Desktop\Atmosphere-USB-Fork'
 & $git -C $repo log -1 --format='%h %s'
 ```
 
-## Publication remains a separate action
+## Branch published; future publishing uses explicit approved changes
 
-When you **explicitly approve publishing the local development branch** on your own public GitHub fork, and Git authentication is available in the local Git client, the bounded publication command is:
+The owner authorised publication of the documentation-only development branch. The local Windows Git client's credential helper was unable to authenticate in non-interactive mode; the already-connected, authorised GitHub integration published the same eight files directly to `origin`. Their Git blob hashes and complete tree SHA were checked against the desktop copies before publication.
+
+The GitHub commit identity differs from the two local documentation commits because the GitHub API created a new publication commit. The desktop checkout will be synchronized to the published commit using a protected local history backup, leaving source content unchanged. The official `upstream` repository and hosted fork's `master` were not written to.
+
+Future publication of **approved new work** should target `origin` only. GitHub/Windows sign-in may be needed for direct desktop Git pushes. Do not share passwords, access tokens or game files.
+
+To inspect the published branch:
 
 ```powershell
 $git = 'C:\Program Files\Git\cmd\git.exe'
 $repo = Join-Path $env:USERPROFILE 'Desktop\Atmosphere-USB-Fork'
-& $git -C $repo push --set-upstream origin development/usb-storage-feasibility
+& $git -C $repo remote -v
+& $git -C $repo log -1 --oneline
+& $git -C $repo status --short --branch
 ```
-
-This targets your `origin`, **not** the official upstream. Never issue `git push upstream`, force-push, or publish Nintendo game files, firmware, keys, or private tester data.
-
-If a GitHub sign-in prompt appears during an approved push, complete it on your own trusted computer. Do not share your credentials or a personal access token in chat.
 
 ## Reviewing official Atmosphère updates
 

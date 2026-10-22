@@ -36,3 +36,15 @@ See `SOURCE_MAP.md`, `INTERFACE_BOUNDARIES.md` and `IMPLEMENTATION_GATES.md`.
 **Verified:** GitHub reports repository ownership and push privileges for `Awetspoon`; hosted `master` matches upstream pinned Atmosphère 1.12.1 SHA `6b0c077b4c608a3a2ee712b8dc35fee87ceb62e8`. Local repository has `origin` pointing to the hosted fork and `upstream` to official Atmosphère. Complete source history remains available, local branch untouched.
 
 **Still outstanding:** Publishing `development/usb-storage-feasibility` to the public hosted fork is a separate operation requiring the owner's approval. No GitHub branch publication, source-code runtime change, or console test was performed by this remote-connection step.
+
+## 2026-10-22 — F0c: owner-approved development branch publication
+
+**Owner approval:** Publish Step 1, `development/usb-storage-feasibility`, to their hosted GitHub fork. Wait for friend's v0.2 test photograph before Phase 2.
+
+**Published to:** `Awetspoon/Atmosphere` on branch `development/usb-storage-feasibility`, using authenticated GitHub integration because Windows Git credential prompts were unavailable.
+
+**Verified:** The eight file Git blobs and full Git tree SHA `8f5c5fe1da76ddc77630b7a34d847c5e0605372d` match the development checkout exactly. First publication GitHub commit: `7b303603f02a543896896454eb82905723a77704`. Fork `master` and official upstream were not updated.
+
+**Desktop branch:** Synchronize onto the remote publication commit and preserve original local documentation commits in an archive branch. Contents stay identical. No console/USB device or original CFW implementation file was touched.
+
+**Next action:** Wait for the v0.2 USB read-only test photo (not received yet). No assumption of USB success or gamecard emulation.
